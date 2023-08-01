@@ -30,7 +30,7 @@ DateTime? _parseRfc822DateTime(String dateString) {
       pattern = rfc822DateWithoutSecondsPattern;
     }
 
-    final format = DateFormat(pattern);
+    final format = DateFormat(pattern, 'en_US');
     return format.parse(dateString, utc);
   } on FormatException {
     return null;
